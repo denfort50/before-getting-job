@@ -28,7 +28,7 @@
 3) Открыть командную строку и перейти в папку с проектом, например `cd c:\projects\auto_shop`
 4) Выполнить команду `mvn install`
 5) Перейти в папку target командой `cd target`
-6) Выполнить команду `java -jar before-getting-job-1.0.jar`
+6) Выполнить команду `java -jar before-getting-job-0.0.1-SNAPSHOT.jar`
 
 ## Взаимодействие с приложением
 
