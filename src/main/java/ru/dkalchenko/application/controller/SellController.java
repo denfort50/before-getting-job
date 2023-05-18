@@ -5,7 +5,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import ru.dkalchenko.application.dto.SellDTO;
-import ru.dkalchenko.application.service.SellServiceImpl;
+import ru.dkalchenko.application.service.SellService;
 
 import java.sql.Timestamp;
 import java.util.HashMap;
@@ -17,11 +17,11 @@ import java.util.Map;
 @RequestMapping("/autoShop")
 public class SellController {
 
-    private final SellServiceImpl sellServiceImpl;
+    private final SellService sellService;
 
     @GetMapping("/revenue")
     public ResponseEntity<Map<String, Integer>> getRevenue(@RequestParam Map<String, String> params) {
-        Integer result = sellServiceImpl.getRevenue(
+        Integer result = sellService.getRevenue(
                 Timestamp.valueOf(params.get("dateStart")),
                 Timestamp.valueOf(params.get("dateEnd")));
         Map<String, Integer> response = new HashMap<>();
@@ -31,7 +31,7 @@ public class SellController {
 
     @GetMapping("/report")
     public ResponseEntity<List<SellDTO>> getAllInNecessaryOrder() {
-        List<SellDTO> sellDTOList = sellServiceImpl.getSellsInNecessaryOrder();
+        List<SellDTO> sellDTOList = sellService.getSellsInNecessaryOrder();
         return new ResponseEntity<>(sellDTOList, HttpStatus.OK);
     }
 }
