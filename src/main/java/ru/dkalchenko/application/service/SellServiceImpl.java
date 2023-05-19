@@ -3,7 +3,7 @@ package ru.dkalchenko.application.service;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import ru.dkalchenko.application.dto.SellDTO;
-import ru.dkalchenko.application.repository.jdbc.SellRepository;
+import ru.dkalchenko.application.repository.data.SellDataRepository;
 
 import java.sql.Timestamp;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.List;
 @AllArgsConstructor
 public class SellServiceImpl implements SellService {
 
-    private final SellRepository sellRepository;
+    private final SellDataRepository sellRepository;
 
     public Integer getRevenue(Timestamp dateStart, Timestamp dateEnd) {
         return sellRepository.getRevenue(dateStart, dateEnd);

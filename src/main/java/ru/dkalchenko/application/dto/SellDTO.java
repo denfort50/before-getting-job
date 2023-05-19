@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.sql.Timestamp;
+import java.util.Date;
 
 @Data
 @NoArgsConstructor
@@ -19,7 +19,7 @@ public class SellDTO {
 
     private int orderPrice;
 
-    private Timestamp orderDate;
+    private Date orderDate;
 
     private String autoName;
 
