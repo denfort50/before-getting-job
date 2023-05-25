@@ -23,6 +23,15 @@
 * PostgreSQL 14
 
 ## Инструкция по запуску проекта
+### Используя Docker – выполнить команды
+1) Скачать репозиторий `git clone https://github.com/denfort50/before-getting-job`
+2) Перейти в папку с проектом `cd c:\projects\before-getting-job`
+3) Собрать проект `mvn install`
+4) Собрать образ `docker build -t before-getting-job .`
+5) Запустить контейнер `docker-compose up`
+6) Отправить в Postman GET-запрос `http://127.0.0.1:80/autoShop/report`
+
+### Не используя Docker
 1) Скачать и разархивировать проект
 2) В PostgreSQL создать базу данных cinema (url = `jdbc:postgresql://127.0.0.1:5432/auto_shop`)
 3) Открыть командную строку и перейти в папку с проектом, например `cd c:\projects\auto_shop`
