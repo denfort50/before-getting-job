@@ -33,7 +33,7 @@
 
 ### Не используя Docker
 1) Скачать и разархивировать проект
-2) В PostgreSQL создать базу данных cinema (url = `jdbc:postgresql://127.0.0.1:5432/auto_shop`)
+2) В PostgreSQL создать базу данных auto_shop (url = `jdbc:postgresql://127.0.0.1:5432/auto_shop`)
 3) Открыть командную строку и перейти в папку с проектом, например `cd c:\projects\auto_shop`
 4) Выполнить команду `mvn install`
 5) Перейти в папку target командой `cd target`
